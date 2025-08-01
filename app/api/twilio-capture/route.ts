@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
 
     // Insert into DB
     await sql`
-      INSERT INTO twilio_logs_a (
+      INSERT INTO twilio_aqua_incoming (
         call_sid, from_number, to_number, direction,
         call_status, caller_country, caller_city, caller_state, caller_zip,
         raw_data
