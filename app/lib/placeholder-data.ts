@@ -4,9 +4,9 @@ const users = [
   {
     id: '40bef84-6620-11f0-a0db-7acef098a341',
     name: 'User',
-    email: 'tuningbandit@gmail.com',
+    email: 'aquarestore1@gmail.com',
     password: 'bzANpgL@84L2EDedX!',
-    role: 'admin',
+    role: 'user',
   },
 ];
 

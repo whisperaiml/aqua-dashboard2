@@ -15,9 +15,9 @@ export default function Page() {
           <p
             className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
           >
-            <strong>Welcome to Bandit.</strong> This Dashboard for the{' '}
-            <a href="https://www.bandittuning.com" className="text-blue-500">
-              Bandit Tuning Company
+            <strong>Welcome to Aqua.</strong> This Dashboard for the{' '}
+            <a href="https://www.aquarestorepro.com" className="text-blue-500">
+              Aqua Restore Pro
             </a>
             , brought to you by Freedom Sites.
           </p>

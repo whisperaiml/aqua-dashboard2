@@ -4,11 +4,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Bandit Dashboard',
-    default: 'Bandit Dashboard',
+    template: '%s | Aqua Dashboard',
+    default: 'Aqua Dashboard',
   },
-  description: 'The official Bandit Dashboard.',
-  metadataBase: new URL('https://www.bandittuning.com'),
+  description: 'The official Aqua Dashboard.',
+  metadataBase: new URL('https://www.aquarestorepro.com'),
 };
 export default function RootLayout({
   children,

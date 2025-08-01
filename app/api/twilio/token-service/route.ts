@@ -4,8 +4,8 @@ import { jwt } from 'twilio';
 const { AccessToken } = jwt;
 
 const VALID_USERS = {
-  bandit: process.env.BANDIT_USER_PASSWORD,
-  sales007: process.env.SALES007_USER_PASSWORD,
+  joe: process.env.JOE_USER_PASSWORD,
+  aqua: process.env.AQUA_USER_PASSWORD,
 } as const;
 
 type ValidUser = keyof typeof VALID_USERS;
@@ -36,6 +36,17 @@ function createToken(identity: string) {
     process.env.TWILIO_API_KEY_SECRET!,
     { identity, ttl: 3600 }
   );
+  // Add PushGrant with push credential SID
+  const pushGrant = {
+    pushCredentialSid: process.env.PUSH_CREDENTIAL_SID!,
+    toPayload: () => ({
+      push_credential_sid: process.env.PUSH_CREDENTIAL_SID!,
+    }),
+    key: 'push',
+  };
+
+  // @ts-ignore because TypeScript doesn't know this grant
+  token.addGrant(pushGrant);
 
   return token.toJwt();
 }
